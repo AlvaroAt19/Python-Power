@@ -1,4 +1,4 @@
-Using the Hackernews API : 'https://github.com/HackerNews/API'.
+The Hackernews API : 'https://github.com/HackerNews/API'.
 
 With the API, i catch the top 10 news with requests.get ,print the respective titles and store the URLs.
 
