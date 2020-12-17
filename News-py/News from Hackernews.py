@@ -28,7 +28,11 @@ time.sleep(5)
 for new in top_10:
     r = requests.get(f'https://hacker-news.firebaseio.com/v0/item/{new}.json?print=pretty')
     pprint.pprint(r.json()['title'])
-    top_10_urls.append(r.json()['url'])
+    try:
+        top_10_urls.append(r.json()['url'])
+    except:
+        top_10_urls.append(None)
+        
     time.sleep(1)
 
 #Function to choose news
@@ -45,13 +49,16 @@ def news_check():
             print('You made a mistake, try again')
         else:
             url = top_10_urls[resp-1]
-            #Using webbrowser to open the url
-            webbrowser.open_new(url)
+            if url == None:
+                print('-'*10 + "There isn't any url for this news above" + '-'*10 +'\n')
+            else:
+                #Using webbrowser to open the url
+                webbrowser.open_new(url)
             break
 
 #Looping to open the selected news
 while True:
-    again = input('Do you wanna check news?Y/N: ')
+    again = input('Do you wanna check any news?Y/N: ')
     if again.lower() == 'y':
         news_check()
     elif again.lower() == 'n':
