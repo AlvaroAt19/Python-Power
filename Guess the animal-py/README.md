@@ -1,2 +1,2 @@
-# Python-Power
-Repository that i will use to keep some python codes
+# Guess the animal
+Just a simple game with animals, that is way better than 'Guess the number'
