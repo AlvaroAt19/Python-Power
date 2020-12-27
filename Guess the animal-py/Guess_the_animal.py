@@ -28,10 +28,15 @@ def main():
             return 'YOU WIN!!!!'
         else:
             att -= 1
-            print('You have ' + str(att) + ' attempts')
-    return 'YOU LOOOOSE!!!!, the correct answer is: ' + animal.name.upper()
+            if att == 0:
+                pass
+            else:
+                print('You have ' + str(att) + ' attempts')
+    return 'YOU LOOOOSE!!!! \nThe correct answer is: ' + animal.name.upper()
 
 if __name__ == '__main__':
+    print('='*70)
+    print ('-'*27 + 'GUESS THE ANIMAL' + '-'*27)
     while True:
         game = input('Do you wanna play? \nAnswer with Y or N: ')
         
