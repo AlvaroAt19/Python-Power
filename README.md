@@ -1,2 +1,2 @@
 # Python-Power
-My repository for keep some python codes, and other stuffs
+Repository that i will use to keep some python codes
