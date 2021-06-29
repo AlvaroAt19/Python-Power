@@ -6,7 +6,7 @@ Created on Sun Dec 27 00:55:49 2020
 """
 
 #Each animal will be a class, and each will have 2 characteristics
-#Sound make and a fisical characteristics
+#Sound and fisical 
 
 class Dog:
     def __init__(self):
